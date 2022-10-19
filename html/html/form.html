@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire test</title>
+  <style>
+    input:invalid {
+      border: red solid 10px;
+      
+    }
+    div {
+      position: relative;
+    }
+    input:invalid:after {
+      content: "Format invalide";
+      display: block;
+      border: black solid 10px;
+      position: absolute;
+      right: 100%;
+      z-index: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Inscription à la newsletter</h1>
+  <form action="/html/retourForm.html" method="get">
+    <!-- <div>
+      <label for="email">Email</label>
+      <input id="email" name="input-email" type="email">
+    </div>
+
+
+    <div>
+      <div>
+        <label for="age">Quel est votre âge (réservé aux adultes de 18 à 100 ans) ?</label>
+        <input id="age" max="100" min="18" name="age" step="1" type="number" />
+      </div>
+      <div>
+        <label for="onFruit">Quel est votre fruit préféré ?</label>
+        <input id="onFruit" list="maSuggestion" type="text" /> <datalist id="maSuggestion">
+          <option>Pomme</option>
+          <option>Banane</option>
+          <option>Mûre</option>
+          <option>Airelles</option>
+          <option>Citron</option>
+          <option>Litchi</option>
+          <option>Pêche</option>
+          <option>Poire</option>
+        </datalist>
+      
+      </div>
+      <div>
+        <label for="maDate">Quand êtes vous disponible cet été (du 21 juin au 21 septembre 2020) ?</label>
+        <input id="maDate" max="2020-09-20" min="2020-06-20" type="date" />
+      </div>
+      <div>
+        <label for="beans">Combien de haricots pouvez‑vous manger ?</label>
+        <input id="beans" max="500" min="0" name="beans" step="10" type="range" />&nbsp;
+      </div> -->
+      <div>
+        <label for="tel">Téléphone </label>
+        <input aria-label="10-digit number" id="tel" name="tel3" pattern="^\+0033[6-7][0-9]{8}" placeholder="+0033661616161" size="20"
+          maxlength="14" type="tel" />
+      </div>
+    </div>
+    <input type="submit" value="S'inscrire">
+  </form>
+  </form>
+</body>
+
+</html>
