@@ -1,0 +1,17 @@
+body header > section > h1,
+* {
+  border: 1px solid black;
+}
+h2 {
+  font-size: 2rem;
+  color: yellow;
+  background-color: bisque;
+  border: 0;
+}
+.title-danger {
+  color: green;
+  border: 0;
+}
+#title-specific {
+  color: pink;
+}

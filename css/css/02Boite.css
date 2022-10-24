@@ -1,0 +1,25 @@
+body{
+  /* Hexadecimal de 0 - F RVB */
+  background-color: rgba(0,0, 128,0.3) ;
+}
+h1 {
+  border: 3px solid red;
+  margin: 20px 0;
+  padding: 20px;
+  font-size: 3rem;
+  border-radius: 30px;
+  font-weight: 100;
+  color: green;
+}
+* {
+  border: 1px solid black;
+}
+p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 50%;
+  white-space: break-spaces;
+}
+img {
+  max-width: 100%; /* 50% du conteneur direct ou du parent direct */
+}

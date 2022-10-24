@@ -1,0 +1,42 @@
+body{
+  /* Hexadecimal de 0 - F RVB */
+  background-color: rgba(0,0, 128,0.3) ;
+}
+h1 {
+  border: 3px solid red;
+  margin: 20px 0;
+  padding: 20px;
+  font-size: 3rem;
+  border-radius: 30px;
+  font-weight: 100;
+  color: green;
+}
+* {
+  border: 1px solid black;
+}
+p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  
+  white-space: break-spaces;
+}
+img {
+  max-width: 100%; /* 50% du conteneur direct ou du parent direct */
+  float: none;
+  margin: 0;
+}
+
+/* Plus grand que 980px */
+@media screen and (min-width: 980px) {
+  img {
+    max-width: 50%; /* 50% du conteneur direct ou du parent direct */
+    float: left;
+    margin: 0 30px 0 0;
+  }
+}
+/* Au delà de 1200px */
+@media screen and (min-width: 1200px) {
+  img {
+    max-width: 25%; /* 50% du conteneur direct ou du parent direct */
+  }
+}
