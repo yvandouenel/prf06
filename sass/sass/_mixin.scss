@@ -1,0 +1,16 @@
+/* mixin */
+@mixin navbar($color: $primary-color, $bgcolor: transparent) {
+  nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    color: $color;
+    justify-content: space-between;
+    background-color: $bgcolor;
+    li{
+      text-decoration: underline;
+      padding: 10px;
+    }
+  }
+}

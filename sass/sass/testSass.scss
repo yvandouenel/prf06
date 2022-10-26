@@ -1,19 +1,12 @@
-/* mixin */
-@mixin navbar($color, $bgcolor: transparent) {
-  nav ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    color: $color;
-    justify-content: space-between;
-    background-color: $bgcolor;
-    li{
-      text-decoration: underline;
-      padding: 10px;
-    }
-  }
+/* import des mixins */
+@import "_mixin.scss";
+
+@import "_variables.scss";
+
+h1 {
+  color: $primary-color;
 }
+
 /* Tous les styles concernant le header */
 header {
   border: 1px solid black;
@@ -23,7 +16,7 @@ header {
 footer {
   border: 1px solid "red";
   /* appel de mixin  */
-  @include navbar($color: DarkGreen, $bgcolor: yellow);
+  @include navbar( $bgcolor: greylight);
 }
 
 

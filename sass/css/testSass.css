@@ -1,4 +1,9 @@
-/* mixin */
+/* import des mixins */ /* mixin */ /* Variable */
+/* $primary-color: #72DED4; */
+h1 {
+  color: #72DED4;
+}
+
 /* Tous les styles concernant le header */
 header {
   border: 1px solid black;
@@ -27,9 +32,9 @@ footer nav ul {
   padding: 0;
   display: flex;
   list-style: none;
-  color: DarkGreen;
+  color: #72DED4;
   justify-content: space-between;
-  background-color: yellow;
+  background-color: greylight;
 }
 footer nav ul li {
   text-decoration: underline;
