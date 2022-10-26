@@ -1,0 +1,17 @@
+div.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: flex-start;
+  height: 100vh;
+  border: 2px solid red;
+  gap: 5%;
+  font-size: 2rem;
+}
+div.d-flex > div {
+  flex-basis: 30%;
+  font-size: 2rem;
+}
+div.d-flex > div > div {
+  border: 1px solid black;
+}

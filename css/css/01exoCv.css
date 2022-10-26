@@ -1,0 +1,77 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+#header-wrapper {
+  background-color: #D9FAC4;
+}
+
+#header-wrapper:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#header-wrapper>h2,
+#header-wrapper>p {
+  padding: 20px;
+}
+
+#cb {
+  float: right;
+  max-height: 200px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin: 50px 0 15px 0;
+  border-bottom: 2px solid #AD8C7F;
+}
+
+p {
+  line-height: 2em;
+}
+
+h2 {
+  font-family: 'Meow Script', cursive;
+  font-size: 3rem;
+}
+
+.baseline {
+  font-family: 'Meow Script', cursive;
+  font-size: 2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media screen and (max-width:980px) {
+  body {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:980px) {
+
+  #tbl {
+    max-width: 20%;
+    margin-right: 30px;
+    float: left;
+  }
+
+  header:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .container {
+    width: 1120px;
+    margin: 0 auto;
+  }
+}

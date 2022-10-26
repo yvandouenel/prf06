@@ -1,0 +1,13 @@
+.xl:before {
+  font-size: 2rem !important;
+}
+.xxl:before {
+  font-size: 4rem;
+}
+.warning:before {
+  color: red;
+}
+.demo-icon:hover:before {
+  color: orange;
+  cursor: pointer;
+}

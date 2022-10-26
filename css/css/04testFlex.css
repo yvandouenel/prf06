@@ -1,0 +1,21 @@
+* {
+  border: 1px solid black;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 0;
+  height: 100vh;
+  align-items: stretch;
+}
+/* Je m'adresse aux enfants direct d'un élément
+qui est en flexbox  */
+.d-flex > div {
+  flex-basis: calc((100% / 6) - 20px);
+}
+#d3 {
+  align-self: flex-start
+}
