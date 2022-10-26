@@ -1,0 +1,37 @@
+/* mixin */
+/* Tous les styles concernant le header */
+header {
+  border: 1px solid black;
+  /* appel de mixin  */
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  color: DarkRed;
+  justify-content: space-between;
+  background-color: transparent;
+}
+header nav ul li {
+  text-decoration: underline;
+  padding: 10px;
+}
+
+footer {
+  border: 1px solid "red";
+  /* appel de mixin  */
+}
+footer nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  color: DarkGreen;
+  justify-content: space-between;
+  background-color: yellow;
+}
+footer nav ul li {
+  text-decoration: underline;
+  padding: 10px;
+}/*# sourceMappingURL=testSass.css.map */

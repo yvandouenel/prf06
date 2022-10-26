@@ -7,7 +7,10 @@
 .warning:before {
   color: red;
 }
-.demo-icon:hover:before {
+[class^="icon-"]:hover:before {
   color: orange;
   cursor: pointer;
+}
+.success:before {
+  color: green;
 }
