@@ -1,8 +1,8 @@
 figure {
+  transition: transform ease-out 0.2s;
   position: relative;
   figcaption {
     position: absolute;
-    border: 1px solid red;
     top: 0;
     left: 0;
     width: 100%;
@@ -12,6 +12,11 @@ figure {
     background: linear-gradient(to bottom, transparent, black);
     min-height: 50%;
     align-self: stretch;
+  }
+  &:hover {
+    box-shadow: 5px 5px 15px 5px #000000;
+    cursor: pointer;
+    transform: translateY(-7px);
   }
 }
 
