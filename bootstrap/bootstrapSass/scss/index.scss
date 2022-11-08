@@ -1,0 +1,8 @@
+/* Import de tout ce qui va modifier les valeurs par défaut de bootstrap */
+@import "./variables";
+
+/* import de bootstrap */
+@import "./../bootstrap-5.2.2/scss/bootstrap";
+
+/* Mes codes custom */
+@import "./_global";

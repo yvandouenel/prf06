@@ -1,0 +1,18 @@
+/* Media queries via une mixin de bootstrap */
+@include media-breakpoint-down(md) {
+  .container {
+    margin: 0;
+  }
+  .containerSection {
+    // display: flex;
+    gap: 100px;
+    width: 100vw;
+    background-color: #333;
+    overflow-x: auto;
+    white-space: nowrap;
+    section {
+      display: inline-block;
+      width: 100vw;
+    }
+  }
+}
