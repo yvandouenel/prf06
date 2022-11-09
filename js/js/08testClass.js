@@ -54,3 +54,10 @@ console.log(`es1`, es1);
 es1.cruise();
 
 console.log(`Danger : `, es1.isDangerous());
+
+class MyString extends String {
+  
+}
+
+const ms = new MyString("Hello World" );
+console.log(`ms : `, ms.split("o"));
