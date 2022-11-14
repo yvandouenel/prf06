@@ -63,3 +63,13 @@ const reducedFruitsBis = fruits.reduce(function(accumulator, current){
   
 }, fruits[0].length);
 console.log(`reducedFruitsBis`, reducedFruitsBis.length);
+
+// Utiliser splice pour supprimer le deuxième élément du tableau fruits
+/* console.log(`fruits`,fruits);
+fruits.splice(1,1);
+console.log(`fruits`,fruits); */
+
+// Utiliser splice pour supprimer le deuxième élément du tableau fruits et le remplacer par "Mangue"
+console.log(`fruits`,fruits);
+fruits.splice(1,1,"Mangue");
+console.log(`fruits`,fruits);
