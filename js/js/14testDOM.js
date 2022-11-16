@@ -30,7 +30,7 @@ window.document.body.appendChild(p);
    * @param {Object} attribute  (doit comprendre les propriétés name et value)
    * @returns domElement
    */
- function createMarkup(markup_name, text, parent, attribute) {
+function createMarkup(markup_name, text, parent, attribute) {
   const markup = document.createElement(markup_name);
   markup.textContent = text;
   parent.appendChild(markup);
@@ -39,5 +39,21 @@ window.document.body.appendChild(p);
   }
   return markup;
 }
-const p2 = createMarkup("p", "Hello ", document.body, {name:"class", value:"danger"});
-const span =  createMarkup("span", "George", p2);
+const p2 = createMarkup("p", "Hello ", document.body, { name: "class", value: "danger" });
+const span = createMarkup("span", "George", p2);
+
+// Correction de l'exercice  
+const header = createMarkup("header", "", document.body);
+const nav = createMarkup("nav", "", header);
+const buttons = [];
+
+// Création des boutons via une boucle
+for (let i = 0; i < 4; i++) {
+  // Ajout de l'élement du DOM créé dans la tableau buttons
+  buttons.push(createMarkup("button", "Item " + (i + 1), nav));
+
+}
+
+// couleur rouge
+buttons[0].style.color = "red";
+
