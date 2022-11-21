@@ -1,3 +1,4 @@
+"use strict";
 // Export d'un ojet qui contient la référence à 2 fonctions qui permettent d'interagir avec la variable state. Il n'y a pas d'autre façon de modifer ou d'obtenir state.
 function createStore() {
   let state = 0;

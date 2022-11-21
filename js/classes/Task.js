@@ -1,3 +1,4 @@
+"use strict";
 import Utils from "./Utils.js";
 export default class Task extends Utils {
   constructor(name) {
