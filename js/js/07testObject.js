@@ -14,10 +14,10 @@ function Scooter(brand, weight, height, wheel_size) {
 
 }
 // Propriétés du type function (cruise = rouler)
-Scooter.prototype.cruise = function() {
+Scooter.prototype.cruise = function () {
   console.log(`Je suis de la marque ${this.brand} et je roule à ma vitesse max : ${this.maxSpeed()} Km/h`);
 }
-Scooter.prototype.maxSpeed = function() {
+Scooter.prototype.maxSpeed = function () {
   return (this.weight * this.height * this.wheel_size / 1000);
 }
 // Instanciations des trotinettes
@@ -31,3 +31,6 @@ console.log(`scooter2`, scooter2);
 // Appel d'une fonction attachée à un objet (une méthode)
 scooter1.cruise();
 scooter2.cruise();
+
+
+//console.log(scooter1.constructor.name);

@@ -61,3 +61,19 @@ class MyString extends String {
 
 const ms = new MyString("Hello World" );
 console.log(`ms : `, ms.split("o"));
+
+console.log("Nom de la classe : ", scooter1.constructor.name);
+console.log("Prototype : ", Object.getPrototypeOf(scooter1));
+console.log("Prototype : ", Object.getPrototypeOf(Object.getPrototypeOf(scooter1)));
+
+class A {}
+class B extends A {}
+class C extends B {}
+function logClasses(object) {
+  while (object) {
+    object = Object.getPrototypeOf(object);
+    if(object) console.log("classe : ",object.constructor.name);
+  }
+
+}
+logClasses(new C());

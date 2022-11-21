@@ -44,6 +44,15 @@ const span = createMarkup({
   parent: p2
 });
 
+function logClasses(object) {
+  while (object) {
+    object = Object.getPrototypeOf(object);
+    if(object) console.log("classe : ",object.constructor.name);
+  }
+
+}
+logClasses(p2);
+
 // Correction de l'exercice  
 /* const header = createMarkup("header", "", document.body);
 const nav = createMarkup("nav", "", header);
