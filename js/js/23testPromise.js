@@ -8,8 +8,8 @@
  */
 function getToken() {
   return new Promise((resolve, reject) => {
-    setTimeout(function() {
-      if(Math.random() > 0.5) {
+    setTimeout(function () {
+      if (Math.random() > 0.5) {
         console.log(`cas favorable`);
         resolve("QSFQSFDFLSLDFOSDLFMLDS");
       }
@@ -23,10 +23,10 @@ function getToken() {
 
 function getUser(token) {
   return new Promise((resolve, reject) => {
-    setTimeout(function() {
-      if(token && Math.random() > 0.5) {
+    setTimeout(function () {
+      if (token && Math.random() > 0.5) {
         console.log(`cas favorable`);
-        resolve({login: "Toto", id: "4599"});
+        resolve({ login: "Toto", id: "4599" });
       }
       else {
         console.log(`cas défavorable`);
@@ -36,14 +36,27 @@ function getUser(token) {
   })
 }
 
-getToken()
-.then(token => {// récupération de l'appel de resolve
-  console.log(`token : `, token);
-  return getUser(token);
-})
-.then(user => {
-  console.log(`user : `, user);
-})
-.catch(error => {// Récupération de l'erreur envoyée par reject
-  console.error(`Erreur attrapée : `, error);
-})
+const result = getToken()
+  .then(token => {// récupération de l'appel de resolve
+    console.log(`token : `, token);
+    return getUser(token);
+  })
+  .then(user => {
+    console.log(`result`, result);
+    console.log(`user : `, user);
+  })
+  .catch(error => {// Récupération de l'erreur envoyée par reject
+    console.error(`Erreur attrapée : `, error);
+  });
+
+async function getTokenUser() {
+  try {
+    const token = await getToken();
+    const user = await getUser(token);
+    //ici c'est que mes deux promesses (getToken et getUser) ont été tenues
+    console.log(`token`, token);
+    console.log(`user`, user);
+  } catch (error) {
+    console.error(`Erreur attrapée : `, error);
+  }
+}
