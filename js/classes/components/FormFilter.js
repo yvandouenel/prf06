@@ -8,6 +8,7 @@ export default class FormFilter extends Utils {
     this.handleFilterUniversities = handleFilterUniversities;
     // gestion des événements
     this.handleFormFilterSubmit();
+    this.handleInputFilter();
 
   }
   handleFormFilterSubmit() {
@@ -15,6 +16,12 @@ export default class FormFilter extends Utils {
     this.dom_elements.elt_form.onsubmit = (e) => {
       e.preventDefault();
       console.log(`dans handleFormFilterSubmit`);
+      this.handleFilterUniversities(this.dom_elements.elt_input.value);
+    }
+  }
+  handleInputFilter() {
+    this.dom_elements.elt_input.oninput = (e) => {
+      e.preventDefault();
       this.handleFilterUniversities(this.dom_elements.elt_input.value);
     }
   }
