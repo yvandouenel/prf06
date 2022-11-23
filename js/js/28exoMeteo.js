@@ -1,7 +1,5 @@
-const config = {
-  baseUrl: 'http://api.openweathermap.org',
-  apiKey: '88d72bc7f30bc91056f03d28dbc993b9'
-}
+import config from "./config.js";
+import createMarkup from "./utils.js";
 
 const form = document.querySelector('form');
 form.onsubmit = async function (e) {
@@ -9,7 +7,8 @@ form.onsubmit = async function (e) {
   const cityName = document.getElementById("cityName").value;
   console.log(cityName);
   const coordinates = await getCityCoordinate(cityName);
-  getWeather(coordinates);
+  const weather = await getWeather(coordinates);
+  render(weather);
 }
 
 const getCityCoordinate = async name => {
@@ -29,7 +28,7 @@ const getCityCoordinate = async name => {
 
 const getWeather = async coordinates => {
   try {
-    const response = await fetch(`${config.baseUrl}/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${config.apiKey}`);
+    const response = await fetch(`${config.baseUrl}/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${config.apiKey}&units=metric&lang=fr`);
     if (response.ok) {
       return await response.json();
     } else {
@@ -38,5 +37,15 @@ const getWeather = async coordinates => {
   } catch (error) {
     console.error(error);
   }
+}
+
+const render = weather => {
+  console.log(weather);
+  // http://openweathermap.org/img/wn/10d@2x.png
+  createMarkup('p', weather.name, document.body);
+  createMarkup('p', 'Température actuelle : ' + weather.main.temp, document.body);
+  createMarkup('p', 'Température minimale : ' +weather.main.temp_min, document.body);
+  createMarkup('p', 'Température maximale : ' +weather.main.temp_max, document.body);
+  createMarkup('p', weather.weather[0].description, document.body);
 }
 
