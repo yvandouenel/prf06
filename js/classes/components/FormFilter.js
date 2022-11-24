@@ -20,10 +20,13 @@ export default class FormFilter extends Utils {
     }
   }
   handleInputFilter() {
+    
+    // Fonction fléchée gestionnaire d'événement
     this.dom_elements.elt_input.oninput = (e) => {
       e.preventDefault();
+      console.log(`this : `, this); // instance de FormFilter ?
       this.handleFilterUniversities(this.dom_elements.elt_input.value);
-    }
+    };
   }
   render() {
     const elt_form = this.createMarkup("form", "", this.parent, { name: "id", value: "form-filter" });
