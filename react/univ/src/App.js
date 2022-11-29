@@ -1,4 +1,5 @@
 import "./App.css";
+import Fetcher from "./services/Fetcher";
 import University from "./components/University";
 import React, { Component } from "react";
 
@@ -9,26 +10,10 @@ class App extends Component {
       universities: [],
     };
   }
-  componentDidMount() {
-    fetch(`http://universities.hipolabs.com/search?country=France`)
-      .then((response) => {
-        console.log(`statut de la réponse`, response.status);
-        if (response.status != 200) {
-          throw new Error(
-            "Problème de statut de la réponse du serveur" + response.statusText
-          );
-        } else {
-          // Vérifie que l'on a bien récupéré du json
-          return response.json(); // Renvoie une promesse dont le résultat ira dans le prochain then en cas de resolve (cas favorable)
-        }
-      })
-      .then((data) => {
-        console.log(`data : `, data);
-        this.setState({ universities: data });
-      })
-      .catch((error) => {
-        console.error(`Erreur catchée`, error);
-      });
+  async componentDidMount() {
+    // Récupération des données
+    const univs = await Fetcher.fetchUniversities("France");
+    this.setState({ universities: univs });
   }
 
   render() {
