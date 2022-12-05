@@ -32,6 +32,7 @@ function App() {
   return (
     <div className="container">
       <div className="row gap-3">
+        {/* <FormCountry> création d'une instance de FormCountry avec le paramètre   setUniversities et appel de la méthode render ou le retour de code JSX */}
         <FormCountry setUniversities={setUniversities} />
         <FormFilter setFilter={setFilter} />
         {pinnedUniversities.map((university, index) => (
